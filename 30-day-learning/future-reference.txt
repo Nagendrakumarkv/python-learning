@@ -1,0 +1,3156 @@
+1☺
+✅ Week 1: Python Basics
+Goal: Understand syntax, data types, control structures.
+
+Day 1: Python setup, Hello World, Variables, Data Types (int, float, str, bool)
+
+Day 2: Operators (arithmetic, comparison, logical, assignment)
+
+Day 3: Strings – slicing, formatting, methods
+
+Day 4: Lists – indexing, slicing, methods, list comprehension
+
+Day 5: Tuples and Sets – properties, methods, immutability
+
+Day 6: Dictionaries – key-value pairs, methods, nested dicts
+
+Day 7: Conditional Statements (if, elif, else) and intro to loops
+
+✅ Week 2: Control Flow, Functions & Modules
+Goal: Write reusable and structured code.
+
+Day 8: Loops (for, while, break, continue, range())
+
+Day 9: Functions – def, return, parameters, default args
+
+Day 10: Lambda functions, map, filter, reduce
+
+Day 11: Recursion + Practice problems
+
+Day 12: Modules and Packages, import, __name__ == "__main__"
+
+Day 13: File Handling (read, write, with, .txt & .csv)
+
+Day 14: Exception Handling – try, except, finally, custom exceptions
+
+✅ Week 3: Object-Oriented Programming (OOP) & Useful Libraries
+Goal: Understand OOP and explore key Python libraries.
+
+Day 15: OOP Basics – classes, objects, __init__, self
+
+Day 16: Inheritance, Polymorphism, Encapsulation
+
+Day 17: Magic Methods (__str__, __repr__, __len__, etc.)
+
+Day 18: Practice mini project using OOP
+
+Day 19: datetime, math, random, os, sys
+
+Day 20: collections (Counter, defaultdict, namedtuple)
+
+Day 21: Virtual environments (venv, pip, requirements.txt)
+
+✅ Week 4: Advanced Concepts & Practice
+Goal: Deepen understanding, handle real-world problems, prepare for data science.
+
+Day 22: Iterators and Generators
+
+Day 23: Decorators and Closures
+
+Day 24: Context Managers and with statement
+
+Day 25: Regex (re module)
+
+Day 26: Unit Testing (unittest, pytest)
+
+Day 27: Logging and Debugging
+
+Day 28: Numpy
+
+Day 29: Pandas
+
+Day 30: Final Practice Project (e.g., student marks analysis or task tracker)
+
+Day 31: Review & Refactor your code, revisit weak areas
+
+-----------------------------------------------------------------------------------------------
+
+------------
+Day 1 Topics
+------------
+
+Printing Output
+
+print("Hello, Data Science World!")
+
+------------------------------------
+
+Variables and Naming Rules
+
+name = "Nagendra"
+age = 28
+is_coder = True
+pi = 3.14
+
+# Recommended: snake_case
+user_name = "nag_kv"
+
+print(name, age, is_coder, pi)
+
+------------------------------------
+
+Data Types
+
+# Integer
+a = 10
+print(a, type(a))
+
+# Float
+b = 5.5
+print(b, type(b))
+
+# String
+c = "Python"
+print(c, type(c))
+
+# Boolean
+d = True
+print(d, type(d))
+
+----------------------------------
+
+Type Checking & Casting
+
+x = 100
+print(type(x))          # int
+
+# Convert int to float
+y = float(x)
+print(y, type(y))       # float
+
+# Convert int to string
+z = str(x)
+print(z, type(z))       # str
+
+# Convert string to int
+num_str = "25"
+num_int = int(num_str)
+print(num_int, type(num_int))
+
+
+-------------------------------------
+
+Practice Task for Today
+
+# Create your own variables
+my_name = "Nagendra"
+my_age = 25
+is_student = False
+average_marks = 87.5
+
+# Print value and type
+print(my_name, type(my_name))
+print(my_age, type(my_age))
+print(is_student, type(is_student))
+print(average_marks, type(average_marks))
+
+-----------------------
+Day 2: Python Operators
+-----------------------
+
+Arithmetic Operators
+
+a = 10
+b = 3
+
+print("Addition:", a + b)        # 13
+print("Subtraction:", a - b)     # 7
+print("Multiplication:", a * b)  # 30
+print("Division:", a / b)        # 3.333...
+print("Floor Division:", a // b) # 3
+print("Modulus:", a % b)         # 1
+print("Exponentiation:", a ** b) # 1000
+
+------------------------------------------------
+
+Comparison Operators
+
+x = 5
+y = 10
+
+print(x == y)   # False
+print(x != y)   # True
+print(x > y)    # False
+print(x < y)    # True
+print(x >= y)   # False
+print(x <= y)   # True
+
+-------------------------------------------------
+
+Logical Operators
+
+a = True
+b = False
+
+print(a and b)   # False
+print(a or b)    # True
+print(not a)     # False
+
+--------------------------------------------------
+
+Assignment Operators
+
+x = 10
+
+x += 5
+print(x)  # 15
+
+x -= 3
+print(x)  # 12
+
+x *= 2
+print(x)  # 24
+
+x /= 4
+print(x)  # 6.0
+
+---------------------------------------------------
+
+Bonus: Identity & Membership
+
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+# Identity
+print(a is b)  # True (same object)
+print(a is c)  # False (same values, different object)
+
+# Membership
+print(2 in a)        # True
+print(4 not in a)    # True
+
+----------------------------------------------
+Day 3 – Strings: Slicing, Formatting & Methods
+----------------------------------------------
+
+Creating Strings
+
+# Single quotes
+s1 = 'Hello'
+# Double quotes
+s2 = "World"
+# Triple quotes (multi-line)
+s3 = """Python
+is
+fun"""
+print(s1, s2, s3)
+
+----------------------------------------------------------
+
+String Indexing & Slicing
+
+text = "Data Science"
+
+print(text[0])     # First char: D
+print(text[-1])    # Last char: e
+
+# Slicing
+print(text[0:4])   # Data (0 to 3)
+print(text[5:])    # Science (from index 5 to end)
+print(text[:4])    # Data (start to index 3)
+print(text[::2])   # Dt cec (every 2nd char)
+print(text[::-1])  # Reverse string
+
+---------------------------------------------------------
+
+String Methods
+
+msg = "  Python is Awesome  "
+
+print(msg.lower())       # lowercase
+print(msg.upper())       # uppercase
+print(msg.strip())       # remove spaces
+print(msg.replace("Awesome", "Powerful"))
+print(msg.split())       # split into list
+print(" - ".join(["Data", "Science", "Rocks"]))
+print(msg.count("o"))    # count occurrences
+print(msg.find("is"))    # find index
+
+--------------------------------------------------------
+
+String Formatting
+
+name = "Nagendra"
+age = 25
+
+# f-string (modern & recommended)
+print(f"My name is {name} and I am {age} years old.")
+
+# format() method
+print("My name is {} and I am {} years old.".format(name, age))
+
+# Old style
+print("My name is %s and I am %d years old." % (name, age))
+
+------------------------------------------------------------------
+
+Useful Checks
+
+text = "Python123"
+print(text.isalpha())   # False (letters only?)
+print(text.isdigit())   # False (digits only?)
+print(text.isalnum())   # True  (letters & digits?)
+print("python".islower()) # True
+print("PYTHON".isupper()) # True
+
+------------------------------------------------------------------
+Day 4 – Lists: Creation, Indexing, Methods, and Operations
+-------------------------------------------------------------------
+
+Creating Lists
+
+# Empty list
+my_list = []
+
+# With elements
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, "Python", 3.14, True]
+
+print(numbers)
+print(mixed)
+
+----------------------------------------------------------------------
+
+Indexing & Slicing
+
+fruits = ["apple", "banana", "cherry", "date", "fig"]
+
+print(fruits[0])     # apple
+print(fruits[-1])    # fig
+print(fruits[1:4])   # ['banana', 'cherry', 'date']
+print(fruits[:3])    # ['apple', 'banana', 'cherry']
+print(fruits[::2])   # ['apple', 'cherry', 'fig']
+
+-----------------------------------------------------------------------
+
+Modifying Lists
+
+fruits[1] = "blueberry"
+print(fruits)
+
+fruits.append("grape")   # add at end
+fruits.insert(2, "kiwi") # add at index 2
+print(fruits)
+
+fruits.remove("date")    # remove by value
+popped = fruits.pop()    # remove last item
+print("Popped:", popped)
+print(fruits)
+
+del fruits[0]            # delete by index
+print(fruits)
+
+-----------------------------------------------------------------------
+
+List Methods
+
+nums = [3, 1, 4, 1, 5, 9]
+
+print(len(nums))      # length
+print(nums.count(1))  # count occurrences
+print(nums.index(5))  # find index
+nums.sort()           # sort in place
+print(nums)
+nums.reverse()        # reverse in place
+print(nums)
+
+-------------------------------------------------------------------------
+
+List Operations
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+print(a + b)       # concatenation
+print(a * 3)       # repeat
+print(3 in a)      # membership
+
+---------------------------------------------------------------------------
+
+Nested Lists
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print(matrix[0][1])  # 2
+
+-----------------------------------------------------------------------------
+Day 5: Tuples and Sets – properties, methods, immutability
+-----------------------------------------------------------------------------
+
+Tuples in Python
+
+# Creating tuples
+my_tuple = (1, 2, 3)
+single_item_tuple = (5,)  # Note the comma
+
+# Accessing elements
+print(my_tuple[0])  # Output: 1
+print(my_tuple[-1]) # Output: 3
+
+# Tuple packing & unpacking
+person = ("John", 25, "Engineer")
+name, age, profession = person
+print(name, age, profession)
+
+# Nested tuples
+nested = (1, (2, 3), 4)
+print(nested[1][0])  # Output: 2
+
+# Count & Index
+nums = (1, 2, 2, 3)
+print(nums.count(2))  # Output: 2
+print(nums.index(3))  # Output: 3
+
+------------------------------------------------------------------------------------
+
+Sets in Python
+
+# Creating sets
+my_set = {1, 2, 3}
+dup_set = {1, 2, 2, 3}
+print(dup_set)  # Output: {1, 2, 3}
+
+# Creating from list
+my_set = set([1, 2, 3, 3])
+print(my_set)  # Output: {1, 2, 3}
+
+# Adding & Removing
+my_set.add(4)
+my_set.remove(2)  # Error if not found
+my_set.discard(5) # No error if not found
+
+# Set operations
+a = {1, 2, 3}
+b = {3, 4, 5}
+print(a.union(b))         # {1, 2, 3, 4, 5}
+print(a.intersection(b))  # {3}
+print(a.difference(b))    # {1, 2}
+print(a.symmetric_difference(b)) # {1, 2, 4, 5}
+
+----------------------------------------------------------------------------------------------
+Day 6: Dictionaries – key-value pairs, methods, nested dicts
+----------------------------------------------------------------------------------------------
+
+Example
+
+student = {
+    "name": "John",
+    "age": 21,
+    "skills": ["Python", "Data Science"]
+}
+print(student)
+
+------------------------------------------------------------------------------------------------
+
+Creating Dictionaries
+
+# Using {}
+car = {"brand": "Tesla", "model": "Model S", "year": 2024}
+
+# Using dict() constructor
+person = dict(name="Alice", age=25, city="New York")
+
+# Empty dictionary
+empty_dict = {}
+
+--------------------------------------------------------------------------------------------------
+
+Accessing Values
+
+car = {"brand": "Tesla", "model": "Model S", "year": 2024}
+
+print(car["brand"])      # Tesla
+print(car.get("model"))  # Model S
+print(car.get("color", "Not Found"))  # Default value if key doesn't exist
+
+--------------------------------------------------------------------------------------------------
+
+Adding & Updating
+
+car["color"] = "Red"       # Add new key-value
+car["year"] = 2025         # Update existing key
+print(car)
+
+----------------------------------------------------------------------------------------------------
+
+Removing Items
+
+car.pop("model")      # Remove by key
+car.popitem()         # Remove last inserted item
+del car["brand"]      # Delete specific key
+car.clear()           # Remove all items
+
+-----------------------------------------------------------------------------------------------------
+
+Dictionary Methods
+
+student = {"name": "John", "age": 21, "course": "Python"}
+
+print(student.keys())     # dict_keys(['name', 'age', 'course'])
+print(student.values())   # dict_values(['John', 21, 'Python'])
+print(student.items())    # dict_items([('name', 'John'), ('age', 21), ('course', 'Python')])
+
+------------------------------------------------------------------------------------------------------
+
+Nested Dictionaries
+
+students = {
+    "student1": {"name": "John", "age": 21},
+    "student2": {"name": "Alice", "age": 22}
+}
+
+print(students["student1"]["name"])  # John
+
+-------------------------------------------------------------------------------------------------------
+
+Looping Through Dictionaries
+
+student = {"name": "John", "age": 21, "course": "Python"}
+
+# Keys
+for key in student:
+    print(key)
+
+# Values
+for value in student.values():
+    print(value)
+
+# Key-value pairs
+for key, value in student.items():
+    print(key, ":", value)
+
+---------------------------------------------------------------------------------------------------------
+
+Dictionary Comprehension
+
+squares = {x: x*x for x in range(5)}
+print(squares)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+----------------------------------------------------------------------------------------------------------
+Day 7: Conditional Statements (if, elif, else) and intro to loops
+----------------------------------------------------------------------------------------------------------
+
+Conditional Statements
+
+Syntax
+
+if condition:
+    # code if condition is True
+elif another_condition:
+    # code if first condition is False, but this is True
+else:
+    # code if none are True
+
+--------------------------------------------------------------------------------------------------------------
+
+Example
+
+age = 20
+
+if age >= 18:
+    print("You are an adult.")
+elif age >= 13:
+    print("You are a teenager.")
+else:
+    print("You are a child.")
+
+-------------------------------------------------------------------------------------------------------------
+
+Comparison & Logical Operators
+
+x = 10
+y = 5
+
+if x > 5 and y < 10:
+    print("Both conditions are True")
+
+--------------------------------------------------------------------------------------------------------------
+
+Introduction to Loops
+
+while loop
+
+count = 1
+while count <= 5:
+    print("Count:", count)
+    count += 1
+
+----------------------------------------------------------------------------------------------------------------
+
+for loop
+
+for fruit in ["apple", "banana", "cherry"]:
+    print(fruit)
+
+for i in range(1, 6):  # 1 to 5
+    print(i)
+
+----------------------------------------------------------------------------------------------------------------
+Day 8: Loops (for, while, break, continue, range())
+----------------------------------------------------------------------------------------------------------------
+
+for loops
+
+# Looping over a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# Looping over a string
+for char in "hello":
+    print(char)
+
+-----------------------------------------------------------------------------------------------------------------
+
+range() function
+
+# range with stop
+for i in range(5):
+    print(i)   # 0,1,2,3,4
+
+# range with start and stop
+for i in range(2, 6):
+    print(i)   # 2,3,4,5
+
+# range with step
+for i in range(0, 10, 2):
+    print(i)   # 0,2,4,6,8
+
+-------------------------------------------------------------------------------------------------------------------
+
+while loops
+
+count = 0
+while count < 5:
+    print("Count is:", count)
+    count += 1
+
+--------------------------------------------------------------------------------------------------------------------
+
+break and continue
+
+# break
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+
+# continue
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)  # only odd numbers
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Nested Loops
+
+for i in range(3):
+    for j in range(2):
+        print(f"i={i}, j={j}")
+
+-----------------------------------------------------------------------------------------------------------------------
+Day 9: Functions – def, return, parameters, default args
+-----------------------------------------------------------------------------------------------------------------------
+
+Defining a Function
+
+def greet():
+    print("Hello, welcome to Python!")
+
+Call it
+
+greet()
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Function with Parameters
+
+def greet_user(name):
+    print(f"Hello, {name}!")
+    
+greet_user("Nagendra")
+greet_user("Bro")
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Function with Return
+
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print("Sum:", result)   # Output: 8
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Default Arguments
+
+def greet_user(name="Guest"):
+    print(f"Hello, {name}!")
+
+greet_user("Nagendra")   # Uses given value
+greet_user()             # Uses default
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Multiple Return Values
+
+def calculate(a, b):
+    return a+b, a-b, a*b
+
+add, sub, mul = calculate(10, 5)
+print("Add:", add)
+print("Sub:", sub)
+print("Mul:", mul)
+
+------------------------------------------------------------------------------------------------------------------------------
+Day 10: Lambda functions, map, filter, reduce
+------------------------------------------------------------------------------------------------------------------------------
+
+Lambda Functions
+
+Syntax:
+lambda arguments: expression
+
+Example:
+square = lambda x: x**2
+print(square(5))  # 25
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+map()
+
+numbers = [1, 2, 3, 4, 5]
+squares = list(map(lambda x: x**2, numbers))
+print(squares)  # [1, 4, 9, 16, 25]
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+filter()
+
+numbers = [10, 15, 20, 25, 30]
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)  # [10, 20, 30]
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+reduce()
+
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+product = reduce(lambda x, y: x * y, numbers)
+print(product)  # 120 (1*2*3*4*5)
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+examples
+
+names=["naga","kumar","appu"]
+uppercase_names=list(map(lambda str:str.upper(),names))
+print(uppercase_names) # ['NAGA', 'KUMAR', 'APPU']
+
+numbers=[10,160,60,5,35,200]
+greater_than_fifty_list=list(filter(lambda num:num>50,numbers))
+print(greater_than_fifty_list) # [160, 60, 200]
+
+from functools import reduce
+numbers=[10,160,60,5,35,200]
+maximum=reduce(lambda x,y:x if x>y else y,numbers)
+print(maximum) # 200
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Day 11: Recursion + Practice problems
+--------------------------------------------------------------------------------------------------------------------------------------
+Example 1: Factorial (Classic Recursion)
+
+def factorial(n):
+    if n == 0 or n == 1:  # base case
+        return 1
+    return n * factorial(n - 1)  # recursive case
+
+print(factorial(5))  # 120
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Example 2: Fibonacci (Recursive)
+
+def fibonacci(n):
+    if n <= 1:  # base case
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+for i in range(10):
+    print(fibonacci(i), end=" ") #0 1 1 2 3 5 8 13 21 34
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Example 3: Sum of a List
+
+def recursive_sum(arr):
+    if len(arr) == 0:
+        return 0
+    return arr[0] + recursive_sum(arr[1:])
+
+print(recursive_sum([1, 2, 3, 4, 5]))  # 15
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Reverse a String
+
+def reverse_string(s):
+    if len(s) == 0:  # base case
+        return s
+    return reverse_string(s[1:]) + s[0]  # recursive case
+
+print(reverse_string("hello"))  # "olleh"
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Count Digits in a Number
+
+def count_digits(n):
+    if n == 0:   # base case
+        return 0
+    return 1 + count_digits(n // 10)  # remove last digit and count
+
+print(count_digits(12345))  # 5
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Function (xⁿ)
+
+def power(x, n):
+    if n == 0:  # base case
+        return 1
+    return x * power(x, n - 1)  # recursive multiplication
+
+print(power(2, 5))  # 32
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Day 12: Modules and Packages, import, __name__ == "__main__"
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example: math is a built-in module
+
+import math
+
+print(math.sqrt(16))   # 4.0
+print(math.pi)         # 3.14159...
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Importing Modules
+
+import math
+print(math.factorial(5))   # 120
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Import specific function
+
+from math import sqrt, pi
+print(sqrt(25))   # 5.0
+print(pi)         # 3.14159...from math import sqrt, pi
+print(sqrt(25))   # 5.0
+print(pi)         # 3.14159...
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Rename module
+
+import math as m
+print(m.sqrt(81))   # 9.0
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Creating Your Own Module
+
+📂 File: mymath.py
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+
+📂 File: main.py
+
+import mymath
+
+print(mymath.add(10, 5))       # 15
+print(mymath.subtract(10, 5))  # 5
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Packages in Python
+
+📂 Project structure:
+
+mypackage/
+    __init__.py
+    calculator.py
+    stringutils.py
+
+📂 calculator.py
+
+def multiply(a, b):
+    return a * b
+
+📂 main.py
+
+from mypackage import calculator
+
+print(calculator.multiply(4, 5))   # 20
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+__name__ == "__main__"
+
+📂 test.py
+
+def greet():
+    print("Hello from test.py!")
+
+if __name__ == "__main__":
+    print("Running directly")
+    greet()
+else:
+    print("Imported as a module")
+
+📂 Run:
+
+python test.py → prints "Running directly"
+
+import test → prints "Imported as a module"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 13: File Handling (read, write, with, .txt & .csv)
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📌 1. Opening a file
+
+# syntax: open(filename, mode)
+f = open("sample.txt", "w")  # open for writing
+f.write("Hello, Nagendra!")  # write text
+f.close()                   # always close after work
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📌 2. Reading a file
+
+f = open("sample.txt", "r")   # open in read mode
+content = f.read()
+print(content)
+f.close()
+
+Other read methods:
+
+f.readline()   # read one line
+f.readlines()  # read all lines as list
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📌 3. Using with (Best Practice ✅)
+
+with open("sample.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📌 4. Writing multiple lines
+
+lines = ["Python is awesome\n", "File handling is easy\n"]
+
+with open("sample.txt", "w") as f:
+    f.writelines(lines)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📌 5. Working with .csv files
+
+Writing CSV
+
+import csv
+
+with open("data.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Name", "Age"])
+    writer.writerow(["Nagendra", 25])
+    writer.writerow(["Rahul", 30])
+
+Reading CSV
+
+import csv
+
+with open("data.csv", "r") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+
+Output:
+
+['Name', 'Age']
+['Nagendra', '25']
+['Rahul', '30']
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 Example: Append text to a file
+
+# Open in append mode
+with open("notes.txt", "a") as file:
+    file.write("\nThis line is added later.")  # adds at the end
+
+🔹 Reading the updated file
+
+with open("notes.txt", "r") as file:
+    print(file.read())
+
+🔹 Appending multiple lines
+
+lines = ["\nLine A", "\nLine B", "\nLine C"]
+
+with open("notes.txt", "a") as file:
+    file.writelines(lines)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 1. Save squares of numbers 1–10 in squares.txt
+
+# Write squares of numbers 1 to 10 into a file
+with open("squares.txt", "w") as file:
+    for i in range(1, 11):
+        file.write(f"{i}^2 = {i**2}\n")
+
+print("Squares saved to squares.txt")
+
+Output:
+
+1^2 = 1
+2^2 = 4
+3^2 = 9
+...
+10^2 = 100
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 2. Read a .txt file and count words
+
+# Read file and count words
+with open("squares.txt", "r") as file:
+    text = file.read()
+    words = text.split()   # split on spaces
+    print(f"Word count: {len(words)}")
+
+Output:
+
+Word count: 20.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 3. Create students.csv and filter by grade > 80
+
+import csv
+
+# Step 1: Write students.csv
+students = [
+    ["Name", "Age", "Grade"],
+    ["Alice", 20, 85],
+    ["Bob", 22, 78],
+    ["Charlie", 19, 92],
+    ["David", 21, 60],
+    ["Eva", 23, 95]
+]
+
+with open("students.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(students)
+
+print("students.csv created!")
+
+# Step 2: Read and print students with grade > 80
+with open("students.csv", "r") as file:
+    reader = csv.DictReader(file)  # read as dictionary
+    print("\nStudents with grade > 80:")
+    for row in reader:
+        if int(row["Grade"]) > 80:
+            print(row["Name"], "-", row["Grade"])
+
+Output:
+
+Students with grade > 80:
+Alice - 85
+Charlie - 92
+Eva - 95
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 14: Exception Handling – try, except, finally, custom exceptions
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. What is an Exception
+
+Errors that happen during program execution.
+If not handled → program crashes.
+
+Example:
+
+print(10 / 0)   # ZeroDivisionError
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2️. Basic try-except
+
+try:
+    num = int("abc")  # error here
+except ValueError:
+    print("Invalid number!")
+
+Output:
+
+Invalid number!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Multiple except blocks
+
+try:
+    x = int(input("Enter a number: "))
+    y = 10 / x
+except ValueError:
+    print("Please enter a valid integer.")
+except ZeroDivisionError:
+    print("Division by zero not allowed.")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. finally block
+
+try:
+    f = open("test.txt", "r")
+    print(f.read())
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    print("Execution complete (closing resources).")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. else with try-except
+
+try:
+    num = int("100")
+except ValueError:
+    print("Error!")
+else:
+    print("Conversion successful:", num)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Raising Exceptions manually
+
+def check_age(age):
+    if age < 18:
+        raise ValueError("Age must be 18 or older")
+    return "Valid age"
+
+print(check_age(20))
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Custom Exceptions
+
+class NegativeNumberError(Exception):
+    pass
+
+def square_root(x):
+    if x < 0:
+        raise NegativeNumberError("Cannot take square root of negative number")
+    return x ** 0.5
+
+try:
+    print(square_root(-9))
+except NegativeNumberError as e:
+    print("Custom Exception:", e)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 1. Handle Division by Zero
+
+try:
+    a = int(input("Enter numerator: "))
+    b = int(input("Enter denominator: "))
+    result = a / b
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 2. Handle Both ValueError and TypeError
+
+try:
+    num = int(input("Enter a number: "))  # might raise ValueError
+    print("Square:", num ** 2)
+    
+    text = None
+    print(len(text))  # TypeError (None has no length)
+except ValueError:
+    print("Error: Please enter a valid integer.")
+except TypeError:
+    print("Error: Invalid operation on data type.")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 3. Custom Exception: InsufficientBalanceError
+
+# Custom exception
+class InsufficientBalanceError(Exception):
+    pass
+
+# Banking function
+def withdraw(balance, amount):
+    if amount > balance:
+        raise InsufficientBalanceError(f"Withdrawal of {amount} exceeds balance of {balance}")
+    return balance - amount
+
+# Usage
+try:
+    balance = 5000
+    amount = int(input("Enter withdrawal amount: "))
+    new_balance = withdraw(balance, amount)
+    print("Withdrawal successful! New balance:", new_balance)
+except InsufficientBalanceError as e:
+    print("Transaction Failed:", e)
+
+Output:
+
+Enter withdrawal amount: 7000
+Transaction Failed: Withdrawal of 7000 exceeds balance of 5000
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+✅ Week 3: Object-Oriented Programming (OOP) & Useful Libraries
+Goal: Understand OOP and explore key Python libraries.
+
+Day 15: OOP Basics – classes, objects, __init__, self
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Defining a Class & Creating an Object
+
+class Car:
+    def drive(self):
+        print("The car is driving")
+
+# create object
+my_car = Car()
+my_car.drive()
+
+Output:
+
+The car is driving
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. __init__ Constructor
+
+Special method that runs automatically when creating an object.
+Used to initialize object data.
+
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand   # instance variable
+        self.model = model
+
+    def display_info(self):
+        print(f"Car: {self.brand} {self.model}")
+
+my_car = Car("Tesla", "Model S")
+my_car.display_info()
+
+Output:
+
+Car: Tesla Model S
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Understanding self
+
+self represents the current object.
+Lets each object keep its own data.
+
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def introduce(self):
+        print(f"My name is {self.name} and I am in grade {self.grade}")
+
+s1 = Student("Nagendra", "A")
+s2 = Student("Rahul", "B")
+
+s1.introduce()
+s2.introduce()
+
+Output:
+
+My name is Nagendra and I am in grade A
+My name is Rahul and I am in grade B
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Example: Bank Account Class
+
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited {amount}, New Balance = {self.balance}")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient balance!")
+        else:
+            self.balance -= amount
+            print(f"Withdrew {amount}, New Balance = {self.balance}")
+
+# create account
+acc = BankAccount("Nagendra", 1000)
+acc.deposit(500)
+acc.withdraw(200)
+acc.withdraw(2000)
+
+Output:
+
+Deposited 500, New Balance = 1500
+Withdrew 200, New Balance = 1300
+Insufficient balance!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 16: Inheritance, Polymorphism, Encapsulation
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Inheritance (Reusing Code)
+
+One class (child) can inherit from another (parent).
+
+# Parent class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print("Animal makes a sound")
+
+# Child class inherits Animal
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} says Woof!")
+
+class Cat(Animal):
+    def speak(self):
+        print(f"{self.name} says Meow!")
+
+dog = Dog("Buddy")
+cat = Cat("Kitty")
+
+dog.speak()   # Buddy says Woof!
+cat.speak()   # Kitty says Meow!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Polymorphism (Many Forms)
+
+Different classes can have the same method name but different behavior.
+
+class Bird:
+    def fly(self):
+        print("Bird is flying in the sky")
+
+class Airplane:
+    def fly(self):
+        print("Airplane is flying in the air")
+
+# Polymorphism in action
+for obj in [Bird(), Airplane()]:
+    obj.fly()
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Encapsulation (Data Hiding)
+
+Protects data by restricting direct access.
+We use public, protected, and private attributes:
+
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner         # public
+        self._balance = balance    # protected (convention)
+        self.__pin = "1234"        # private (name mangling)
+
+    def deposit(self, amount):
+        self._balance += amount
+        print(f"Deposited {amount}, New Balance: {self._balance}")
+
+    def withdraw(self, amount, pin):
+        if pin == self.__pin:
+            if amount <= self._balance:
+                self._balance -= amount
+                print(f"Withdrew {amount}, Remaining Balance: {self._balance}")
+            else:
+                print("Insufficient funds")
+        else:
+            print("Invalid PIN!")
+
+account = BankAccount("Nagendra", 5000)
+account.deposit(2000)
+account.withdraw(1000, "1234")
+
+# ❌ account.__pin  --> Error (private)
+# ✅ Access via method
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 17: Magic Methods (__str__, __repr__, __len__, etc.)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Magic Methods (a.k.a dunder methods).
+These are special methods in Python that start and end with __. They let your objects behave like built-in types.
+
+1. __str__ vs __repr__
+
+__str__: user-friendly string (for print).
+
+__repr__: unambiguous, meant for developers (debugging).
+
+class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def __str__(self):
+        return f"📖 {self.title} by {self.author}"
+
+    def __repr__(self):
+        return f"Book('{self.title}', '{self.author}', {self.pages})"
+
+book = Book("Python 101", "Nagendra", 300)
+
+print(book)          # Calls __str__ → 📖 Python 101 by Nagendra
+print(repr(book))    # Calls __repr__ → Book('Python 101', 'Nagendra', 300)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. __len__
+
+Lets you use len() on objects.
+
+class Playlist:
+    def __init__(self, songs):
+        self.songs = songs
+
+    def __len__(self):
+        return len(self.songs)
+
+my_playlist = Playlist(["Song1", "Song2", "Song3"])
+print(len(my_playlist))   # 3
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. __add__
+
+Overload + operator.
+
+class Money:
+    def __init__(self, amount):
+        self.amount = amount
+
+    def __add__(self, other):
+        return Money(self.amount + other.amount)
+
+    def __str__(self):
+        return f"${self.amount}"
+
+wallet1 = Money(50)
+wallet2 = Money(70)
+
+print(wallet1 + wallet2)  # $120
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. __eq__
+
+Overload == operator.
+
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def __eq__(self, other):
+        return self.grade == other.grade
+
+s1 = Student("A", 90)
+s2 = Student("B", 90)
+print(s1 == s2)   # True (because grades match)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. __getitem__
+
+Make your class act like a list/dictionary.
+
+class MyList:
+    def __init__(self, data):
+        self.data = data
+
+    def __getitem__(self, index):
+        return self.data[index]
+
+nums = MyList([10, 20, 30])
+print(nums[1])   # 20
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔥 Most common magic methods you’ll see:
+
+__init__ → constructor
+
+__str__ → readable string
+
+__repr__ → developer string
+
+__len__ → length
+
+__add__, __sub__, etc → operator overloading
+
+__eq__, __lt__, etc → comparisons
+
+__getitem__ → indexing
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 18: Practice mini project using OOP
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self.is_borrowed = False
+
+    def __str__(self):
+        status = "Borrowed" if self.is_borrowed else "Available"
+        return f"{self.title} by {self.author} ({status})"
+
+
+class Library:
+    def __init__(self, name):
+        self.name = name
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
+        print(f"✅ Book '{book.title}' added to library.")
+
+    def show_books(self):
+        print(f"\n📚 Books in {self.name}:")
+        for book in self.books:
+            print(book)
+
+    def borrow_book(self, title):
+        for book in self.books:
+            if book.title == title and not book.is_borrowed:
+                book.is_borrowed = True
+                print(f"📖 You borrowed '{book.title}'.")
+                return
+        print(f"❌ Book '{title}' is not available.")
+
+    def return_book(self, title):
+        for book in self.books:
+            if book.title == title and book.is_borrowed:
+                book.is_borrowed = False
+                print(f"🔄 You returned '{book.title}'.")
+                return
+        print(f"⚠️ Book '{title}' was not borrowed.")
+
+
+# 🎯 Example Usage
+lib = Library("City Library")
+
+b1 = Book("Python 101", "Nagendra")
+b2 = Book("AI Basics", "John")
+b3 = Book("Data Science", "Alice")
+
+lib.add_book(b1)
+lib.add_book(b2)
+lib.add_book(b3)
+
+lib.show_books()
+
+lib.borrow_book("Python 101")
+lib.show_books()
+
+lib.return_book("Python 101")
+lib.show_books()
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 19: datetime, math, random, os, sys
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📅 1. datetime – Date & Time
+
+import datetime as dt
+
+# Current date and time
+now = dt.datetime.now()
+print("Now:", now)
+
+# Only date
+print("Today:", now.date())
+
+# Formatting date
+print("Formatted:", now.strftime("%d-%m-%Y %H:%M:%S"))
+
+# Creating specific date
+new_year = dt.datetime(2025, 1, 1)
+print("New Year:", new_year)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+➕ 2. math – Mathematical Functions
+
+import math
+
+print("Square root of 16:", math.sqrt(16))
+print("Power 2^5:", math.pow(2, 5))
+print("Ceil of 4.2:", math.ceil(4.2))
+print("Floor of 4.9:", math.floor(4.9))
+print("Pi value:", math.pi)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🎲 3. random – Random Numbers
+
+import random
+
+print("Random float:", random.random())         # between 0 and 1
+print("Random int:", random.randint(1, 10))     # between 1 and 10
+print("Random choice:", random.choice(["apple", "banana", "cherry"]))
+
+# Shuffle list
+nums = [1, 2, 3, 4, 5]
+random.shuffle(nums)
+print("Shuffled:", nums)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+💻 4. os – Operating System
+
+import os
+
+print("Current working dir:", os.getcwd())   # where Python runs
+print("List files:", os.listdir("."))        # list current directory files
+
+# Create and remove a folder
+os.mkdir("test_folder")
+print("Created folder: test_folder")
+
+os.rmdir("test_folder")
+print("Deleted folder: test_folder")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚙️ 5. sys – System-specific parameters
+
+import sys
+
+print("Python version:", sys.version)
+print("Platform:", sys.platform)
+
+# Command line args (when running from terminal)
+print("Arguments:", sys.argv)  # Example: python file.py arg1 arg2
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 20: collections (Counter, defaultdict, namedtuple)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔢 1. Counter – Counting items
+
+from collections import Counter
+
+fruits = ["apple", "banana", "apple", "orange", "banana", "apple"]
+
+count = Counter(fruits)
+print(count)           # Counter({'apple': 3, 'banana': 2, 'orange': 1})
+
+# Most common
+print(count.most_common(1))   # [('apple', 3)]
+
+# Convert back to dict
+print(dict(count))     # {'apple': 3, 'banana': 2, 'orange': 1}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📦 2. defaultdict – Default values for missing keys
+
+from collections import defaultdict
+
+students = defaultdict(int)  # int → default = 0
+
+students["Alice"] += 1
+students["Bob"] += 2
+print(students)    # defaultdict(<class 'int'>, {'Alice': 1, 'Bob': 2})
+
+# Example: group words by first letter
+words = ["apple", "ant", "ball", "bat", "cat"]
+
+group = defaultdict(list)
+for word in words:
+    group[word[0]].append(word)
+
+print(group)  # {'a': ['apple', 'ant'], 'b': ['ball', 'bat'], 'c': ['cat']}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+👤 3. namedtuple – Lightweight classes
+
+from collections import namedtuple
+
+# Define a namedtuple
+Point = namedtuple("Point", ["x", "y"])
+
+p1 = Point(10, 20)
+print(p1)         # Point(x=10, y=20)
+
+print(p1.x, p1.y) # Access like attributes → 10 20
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 1. Most Common Word with Counter
+
+from collections import Counter
+
+text = "python python java c++ python java go".split()
+
+word_count = Counter(text)
+print("Word counts:", word_count)
+
+most_common_word = word_count.most_common(1)
+print("Most common word:", most_common_word[0][0])
+
+👉 Output:
+
+Word counts: Counter({'python': 3, 'java': 2, 'c++': 1, 'go': 1})
+Most common word: python
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 2. Group Numbers by Odd/Even using defaultdict
+
+from collections import defaultdict
+
+nums = [1, 2, 3, 4, 5]
+
+group = defaultdict(list)
+
+for n in nums:
+    if n % 2 == 0:
+        group["even"].append(n)
+    else:
+        group["odd"].append(n)
+
+print(group)
+
+👉 Output:
+
+defaultdict(<class 'list'>, {'odd': [1, 3, 5], 'even': [2, 4]})
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 3. namedtuple for Student Records
+
+from collections import namedtuple
+
+Student = namedtuple("Student", ["name", "age", "grade"])
+
+s1 = Student("Alice", 20, 85)
+s2 = Student("Bob", 21, 75)
+s3 = Student("Charlie", 19, 90)
+
+students = [s1, s2, s3]
+
+# Print only students with grade > 80
+for student in students:
+    if student.grade > 80:
+        print(student)
+
+👉 Output:
+
+Student(name='Alice', age=20, grade=85)
+Student(name='Charlie', age=19, grade=90)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 21: Virtual environments (venv, pip, requirements.txt)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ Why Virtual Environments?
+
+Different projects may need different versions of libraries (e.g., numpy==1.26 in one, numpy==2.0 in another).
+
+Avoids dependency conflicts.
+
+Keeps your global Python clean.
+
+🛠️ 1. Create a Virtual Environment
+
+# Create env named "myenv"
+python -m venv myenv
+
+👉 This will create a folder myenv/ with its own Python + pip.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🛠️ 2. Activate the Environment
+
+myenv\Scripts\activate
+
+👉 You’ll see (myenv) appear in your terminal — meaning the environment is active.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🛠️ 3. Install Packages Inside Env
+
+pip install numpy pandas
+
+Check installed packages:
+
+pip list
+
+Deactivate environment:
+
+deactivate
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🛠️ 4. requirements.txt
+
+Freeze your installed packages into a file:
+
+pip freeze > requirements.txt
+
+Example requirements.txt:
+
+numpy==1.26.0
+pandas==2.2.2
+matplotlib==3.9.
+
+Install everything from file:
+
+pip install -r requirements.txt
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ Example workflow:
+
+# create project folder
+mkdir my_project && cd my_project
+
+# create and activate venv
+python -m venv venv
+source venv/bin/activate   # (Linux/Mac)
+venv\Scripts\activate      # (Windows)
+
+# install libraries
+pip install numpy pandas matplotlib
+
+# save dependencies
+pip freeze > requirements.txt
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+✅ Week 4: Advanced Concepts & Practice
+Goal: Deepen understanding, handle real-world problems, prepare for data science.
+
+Day 22: Iterators and Generators
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Perfect bro 🔥 Today is Day 22: Iterators and Generators — super important when you deal with big datasets in Data Science, 
+because they let you handle data efficiently without loading everything into memory. 🚀
+
+🔁 1. Iterators
+
+An iterator is an object that implements:
+
+__iter__() → returns itself
+
+__next__() → returns next item
+
+nums = [1, 2, 3]
+it = iter(nums)   # create iterator
+
+print(next(it))   # 1
+print(next(it))   # 2
+print(next(it))   # 3
+# print(next(it)) # StopIteration (no more elements)
+
+✅ Any object with __iter__ and __next__ is an iterator.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚡ 2. Generators
+
+A generator is a function that uses yield instead of return.
+
+Returns one value at a time.
+
+Saves memory (doesn’t store all values at once).
+
+def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+
+gen = countdown(5)
+
+for num in gen:
+    print(num)
+
+👉 Output:
+
+5
+4
+3
+2
+1
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🛠️ 3. Generator Expressions
+
+Like list comprehensions, but with () instead of [].
+
+squares = (x*x for x in range(5))
+print(next(squares))  # 0
+print(next(squares))  # 1
+print(list(squares))  # [4, 9, 16]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚡ 4. Why Generators Are Useful in Data Science?
+
+Handling big CSV files → instead of loading everything, read line by line.
+
+Streaming sensor data / logs.
+
+Creating infinite sequences without memory overflow.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🚀 Quick Practice Tasks for You
+
+✅ 1. Iterator Class: EvenNumbers
+
+class EvenNumbers:
+    def __init__(self, limit):
+        self.limit = limit
+        self.num = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.num <= self.limit:
+            result = self.num
+            self.num += 2
+            return result
+        else:
+            raise StopIteration
+
+# Example usage
+evens = EvenNumbers(10)
+for n in evens:
+    print(n)
+
+👉 Output:
+
+0
+2
+4
+6
+8
+10
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 2. Generator: Fibonacci
+
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+# Example usage
+for num in fibonacci(10):
+    print(num)
+
+👉 Output:
+
+0 1 1 2 3 5 8 13 21 34
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+✅ 3. Generator Expression: Cubes of 1–10
+
+cubes = (x**3 for x in range(1, 11))
+
+print(list(cubes))
+
+👉 Output:
+
+[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 23: Decorators and Closures
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 1. Closures
+
+A closure is a function defined inside another function that remembers variables from the outer function, even after the outer function has finished execution.
+
+def outer(msg):
+    def inner():
+        print("Message:", msg)  # remembers msg from outer
+    return inner
+
+say_hello = outer("Hello")
+say_hello()   # Output: Message: Hello
+
+➡️ inner() is a closure because it captures and remembers msg.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 2. Decorators
+
+A decorator is a function that takes another function as input and adds extra functionality to it without changing its source code.
+
+def my_decorator(func):
+    def wrapper():
+        print("Before function runs...")
+        func()
+        print("After function runs...")
+    return wrapper
+
+@my_decorator   # Same as: say_hello = my_decorator(say_hello)
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+Output:
+
+Before function runs...
+Hello!
+After function runs...
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 3. Decorator with Arguments
+
+def repeat(n):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(n):
+                func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+@repeat(3)
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Nagendra")
+
+Output:
+
+Hello, Nagendra!
+Hello, Nagendra!
+Hello, Nagendra!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 4. Practical Decorator Example: Timing
+
+import time
+
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print(f"{func.__name__} took {end - start:.4f} seconds")
+        return result
+    return wrapper
+
+@timer
+def slow_function():
+    time.sleep(2)
+    print("Finished!")
+
+slow_function()
+
+Output:
+
+Finished!
+slow_function took 2.0006 seconds
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 5. *args and **kwargs
+
+In Python, *args and **kwargs are used when you don’t know in advance how many arguments a function will receive.
+
+🔹 *args → Variable number of positional arguments
+
+Collects extra positional arguments into a tuple.
+
+def add(*args):
+    print(args)          # all arguments come as a tuple
+    return sum(args)
+
+print(add(1, 2))          # (1, 2) → 3
+print(add(1, 2, 3, 4, 5)) # (1, 2, 3, 4, 5) → 15
+
+🔹 **kwargs → Variable number of keyword arguments
+
+Collects extra named arguments into a dictionary.
+
+def introduce(**kwargs):
+    print(kwargs)
+
+introduce(name="Nagendra", age=25, role="Developer")
+# Output: {'name': 'Nagendra', 'age': 25, 'role': 'Developer'}
+
+🔹 Using both together
+
+def func(a, b, *args, **kwargs):
+    print("a =", a)
+    print("b =", b)
+    print("args =", args)      # tuple of extra positional args
+    print("kwargs =", kwargs)  # dict of extra keyword args
+
+func(1, 2, 3, 4, 5, x=10, y=20)
+
+Output:
+
+a = 1
+b = 2
+args = (3, 4, 5)
+kwargs = {'x': 10, 'y': 20}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 24: Context Managers and with statement
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 1. What is a Context Manager?
+
+A context manager manages setup and cleanup automatically.
+Example: when working with files:
+
+It opens the file.
+
+After you’re done, it closes the file (even if an error happens).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 2. Using with (built-in context manager)
+
+with open("test.txt", "w") as f:
+    f.write("Hello, world!")
+
+# File is auto-closed, no need for f.close()
+
+Without with, you’d need:
+
+f = open("test.txt", "w")
+try:
+    f.write("Hello, world!")
+finally:
+    f.close()
+
+👉 The with statement makes this cleaner.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 3. Custom Context Manager (Class-based)
+
+You can create your own context manager by defining __enter__ and __exit__.
+
+class MyContext:
+    def __enter__(self):
+        print("Entering context...")
+        return "Resource Ready"
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print("Exiting context...")
+        return False  # False means exceptions (if any) are not suppressed
+
+with MyContext() as resource:
+    print(resource)
+
+Output:
+
+Entering context...
+Resource Ready
+Exiting context...
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 4. Context Manager using contextlib
+
+Python provides a decorator to make writing context managers easier.
+
+from contextlib import contextmanager
+
+@contextmanager
+def open_file(filename, mode):
+    f = open(filename, mode)
+    try:
+        yield f
+    finally:
+        f.close()
+
+with open_file("demo.txt", "w") as f:
+    f.write("Hello from contextlib!")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 5. Real-World Use Cases
+
+File handling (with open()).
+Database connections.
+Acquiring & releasing locks (multithreading).
+Temporarily changing settings (like logging).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 25: Regex (re module)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Regular Expressions (regex) help you search, match, and manipulate text using patterns.
+
+1. Importing re
+
+import re
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Basic Functions
+
+re.match(pattern, string) → checks only at the start
+re.search(pattern, string) → finds the first match anywhere
+re.findall(pattern, string) → returns all matches as a list
+re.sub(pattern, repl, string) → replace text
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Common Patterns
+
+\d → digit (0–9)
+\w → word (letters, digits, underscore)
+\s → whitespace
+. → any character except newline
++ → one or more
+* → zero or more
+? → optional
+{n} → exactly n times
+{n,m} → between n and m times
+^ → start of string
+$ → end of string
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Examples
+
+(a) Check if string starts with "Hello"
+
+import re
+
+text = "Hello World"
+match = re.match(r"Hello", text)
+print(match.group() if match else "No match")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+(b) Find all numbers in a string
+
+text = "Order numbers: 123, 456, and 789"
+numbers = re.findall(r"\d+", text)
+print(numbers)   # ['123', '456', '789']
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+(c) Validate Email
+
+email = "test@example.com"
+pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"
+
+if re.match(pattern, email):
+    print("Valid Email")
+else:
+    print("Invalid Email")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+(d) Replace digits with #
+
+text = "My phone is 9876543210"
+masked = re.sub(r"\d", "#", text)
+print(masked)  # My phone is ##########
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+(e) Extract words starting with capital letters
+
+text = "Python is Fun and Powerful"
+words = re.findall(r"\b[A-Z][a-z]*\b", text)
+print(words)  # ['Python', 'Fun', 'Powerful']
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 26: Unit Testing (unittest, pytest)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Awesome bro 💪 Today is Day 26: Unit Testing — a key step before you start writing data science or production code.
+
+You’ll learn how to test your Python functions automatically using the built-in unittest and the popular external pytest frameworks.
+
+🔹 1. What is Unit Testing?
+
+Unit testing is about testing small, individual parts of your code (units) — like a function or class — to ensure they work correctly.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 2. Using unittest (Built-in Module)
+
+Example file: test_math_utils.py
+
+import unittest
+
+def add(a, b):
+    return a + b
+
+def divide(a, b):
+    return a / b
+
+class TestMathUtils(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-1, 1), 0)
+
+    def test_divide(self):
+        self.assertEqual(divide(10, 2), 5)
+        with self.assertRaises(ZeroDivisionError):
+            divide(10, 0)
+
+if __name__ == '__main__':
+    unittest.main()
+
+Run it:
+
+python test_math_utils.py
+
+✅ Output:
+
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 3. Using pytest (Simpler & More Powerful)
+
+Install once:
+
+pip install pytest
+
+Then create test_math_utils_pytest.py
+
+def add(a, b):
+    return a + b
+
+def divide(a, b):
+    return a / b
+
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-1, 1) == 0
+
+def test_divide():
+    assert divide(10, 2) == 5
+    try:
+        divide(10, 0)
+    except ZeroDivisionError:
+        assert True
+
+Run it:
+
+pytest
+
+✅ Output:
+
+collected 2 items
+test_math_utils_pytest.py ..                      [100%]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 4. Why Testing Matters
+
+Prevents regression (breaking old features
+Builds confidence in refactoring
+Ensures code works as expected
+Crucial for production & data pipelines
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 5. Bonus – setUp() and tearDown() in unittest
+
+Used for running setup or cleanup code before and after every test.
+
+import unittest
+
+class TestExample(unittest.TestCase):
+
+    def setUp(self):
+        print("Setting up...")
+
+    def tearDown(self):
+        print("Cleaning up...")
+
+    def test_case1(self):
+        self.assertTrue(True)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Errors:
+
+pip install pytest 
+Fatal error in launcher: Unable to create process using '"C:\Python310\python.exe" "C:\Python310\Scripts\pip.exe" install pytest': The system cannot find the file specified.
+
+Ah, bro 🔧 — that error means your Python or pip path is broken or mismatched in your system.
+Let’s fix it step-by-step 👇
+
+🧩 Step 1: Check if Python is installed properly
+
+Open Command Prompt (cmd) and type:
+
+python --version
+
+✅ If it shows something like:
+
+Python 3.10.x
+
+you’re good.
+
+❌ If it says “Python not found”, you’ll need to reinstall Python.
+
+👉 Download from:
+🔗 https://www.python.org/downloads/
+
+⚠️ During installation, make sure to check “Add Python to PATH”.
+
+🧩 Step 2: Check pip
+
+python -m pip --version
+
+If you get an error like “No module named pip”, then install pip manually:
+
+python -m ensurepip --upgrade
+
+🧩 Step 3: Install pytest the correct way
+
+Now that pip works, install pytest using:
+
+python -m pip install pytest
+
+🧩 Step 4: Verify installation
+
+Check pytest version:
+
+pytest --version
+
+✅ Output example:
+
+pytest 8.2.1
+
+🧩 Step 5 (Optional): If still failing
+
+If you have multiple Python versions, you can use:
+
+py -3.10 -m pip install pytest
+
+or
+
+py -m pip install pytest
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 27: Logging and Debugging
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Nice bro ⚡ You’re now on Day 27: Logging and Debugging — one of the most professional-level skills every data scientist or backend dev needs!
+
+Let’s break it down 🔍👇
+
+🔹 1. Why Logging?
+
+print() is fine for small scripts,
+but in real projects, we use logging because it:
+
+Keeps a record of what happened
+Helps in debugging production errors
+Allows setting different log levels (info, warning, error)
+Can log to files (not just console)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 2. Basic Logging Setup
+
+import logging
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+logging.debug("This is a debug message")     # Not shown (level = INFO)
+logging.info("Program started successfully")
+logging.warning("Low disk space warning")
+logging.error("File not found error")
+logging.critical("System crash!")
+
+✅ Output:
+
+2025-10-06 19:15:00,123 - INFO - Program started successfully
+2025-10-06 19:15:00,124 - WARNING - Low disk space warning
+2025-10-06 19:15:00,125 - ERROR - File not found error
+2025-10-06 19:15:00,126 - CRITICAL - System crash!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 3. Logging to a File
+
+import logging
+
+logging.basicConfig(
+    filename="app.log",
+    filemode="a",
+    level=logging.DEBUG,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+
+logging.info("App started")
+logging.error("An error occurred")
+
+✅ The log file app.log will store all your messages.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 4. Custom Logger Example
+
+You can have separate loggers for each module:
+
+import logging
+
+logger = logging.getLogger("DataProcessor")
+logger.setLevel(logging.DEBUG)
+
+file_handler = logging.FileHandler("data.log")
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+logger.info("Data processing started")
+logger.warning("Missing values found")
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 5. Debugging with pdb
+
+The built-in Python Debugger (pdb) helps you pause and inspect code at runtime.
+
+import pdb
+
+def divide(a, b):
+    pdb.set_trace()   # Debug breakpoint
+    return a / b
+
+divide(10, 2)
+
+While running, you’ll enter debug mode:
+
+n → next line
+s → step into function
+c → continue execution
+q → quit debugger
+p variable → print variable value
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 6. Bonus: Using breakpoint() (Python 3.7+)
+
+You can simply use:
+
+breakpoint()
+
+It works the same as pdb.set_trace().
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 28: Numpy
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Perfect bro 💪 You’ve officially entered the Data Science zone — starting with Day 28: NumPy, the foundation of numerical computing in Python 🔢
+
+Let’s make today’s session super practical.
+
+🔹 1. What is NumPy?
+
+NumPy = Numerical Python
+
+It’s used for:
+Fast mathematical operations on large data
+Working with arrays (not lists)
+Linear algebra, statistics, matrix operations, etc.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 2. Installation
+
+If not installed yet:
+
+pip install numpy
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 3. Import and Basic Array Creation
+
+import numpy as np
+
+# Create arrays
+arr1 = np.array([1, 2, 3, 4])
+print(arr1)
+
+# 2D array
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+print(arr2)
+
+✅ Output:
+
+[1 2 3 4]
+[[1 2 3]
+ [4 5 6]]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 4. Array Attributes
+
+print(arr2.shape)     # (2, 3)
+print(arr2.ndim)      # 2
+print(arr2.size)      # 6
+print(arr2.dtype)     # int64
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 5. Array Creation Methods
+
+np.zeros((2,3))        # 2x3 matrix of zeros
+np.ones((3,3))         # 3x3 matrix of ones
+np.arange(0,10,2)      # [0 2 4 6 8]
+np.linspace(0,1,5)     # [0.   0.25 0.5 0.75 1.]
+np.eye(3)              # Identity matrix
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 6. Array Operations
+
+a = np.array([10, 20, 30])
+b = np.array([1, 2, 3])
+
+print(a + b)     # [11 22 33]
+print(a - b)     # [9 18 27]
+print(a * b)     # [10 40 90]
+print(a / b)     # [10. 10. 10.]
+print(np.mean(a)) # 20.0
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 7. Indexing and Slicing
+
+arr = np.array([10, 20, 30, 40, 50])
+print(arr[0])     # 10
+print(arr[-1])    # 50
+print(arr[1:4])   # [20 30 40]
+
+2D indexing:
+
+mat = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(mat[0,1])     # 2
+print(mat[:,1])     # column 1 → [2 5 8]
+print(mat[1,:])     # row 1 → [4 5 6]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 8. Boolean Indexing
+
+arr = np.array([1, 2, 3, 4, 5])
+print(arr[arr > 3])   # [4 5]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 9. Useful Math Functions
+
+a = np.array([1, 2, 3, 4])
+print(np.sum(a))       # 10
+print(np.prod(a))      # 24
+print(np.sqrt(a))      # [1. 1.41 1.73 2.]
+print(np.max(a))       # 4
+print(np.min(a))       # 1
+print(np.argmax(a))    # 3
+print(np.mean(a))      # 2.5
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔹 10. Reshaping and Flattening
+
+arr = np.arange(1, 10)
+reshaped = arr.reshape(3, 3)
+print(reshaped)
+
+flattened = reshaped.flatten()
+print(flattened)
+
+✅ Output:
+
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+[1 2 3 4 5 6 7 8 9]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚡ Quick Practice Tasks for You
+
+🧩 1. Create a 4×4 NumPy array with values from 1 to 16
+
+import numpy as np
+
+arr = np.arange(1, 17).reshape(4, 4)
+print(arr)
+
+✅ Output:
+
+[[ 1  2  3  4]
+ [ 5  6  7  8]
+ [ 9 10 11 12]
+ [13 14 15 16]]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧩 2. Extract the 2nd row and 3rd column element
+
+element = arr[1, 2]   # Row index 1 → 2nd row, Col index 2 → 3rd column
+print(element)
+
+✅ Output:
+
+7
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧩 3️. Replace all even numbers with 0
+
+arr[arr % 2 == 0] = 0
+print(arr)
+
+✅ Output:
+
+[[ 1  0  3  0]
+ [ 5  0  7  0]
+ [ 9  0 11  0]
+ [13  0 15  0]]
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧩 4️. Create a random 3×3 matrix and compute its determinant
+
+matrix = np.random.randint(1, 10, (3, 3))
+print("Matrix:\n", matrix)
+
+det = np.linalg.det(matrix)
+print("Determinant:", det)
+
+✅ Output (example):
+
+Matrix:
+ [[3 1 5]
+  [2 4 7]
+  [6 8 9]]
+Determinant: -35.99999999999999
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧩 5️. Find the mean, median, and standard deviation of an array
+
+data = np.array([10, 20, 30, 40, 50])
+
+mean = np.mean(data)
+median = np.median(data)
+std = np.std(data)
+
+print("Mean:", mean)
+print("Median:", median)
+print("Standard Deviation:", std)
+
+✅ Output:
+
+Mean: 30.0
+Median: 30.0
+Standard Deviation: 14.142135623730951
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 29: Pandas
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Perfect, bro 😎 — let’s move to Day 29: Pandas — one of the most important libraries for data analysis and manipulation in Python.
+
+🔹 What is Pandas?
+
+Pandas is a powerful Python library built on top of NumPy, used for:
+Handling structured data (like Excel or SQL tables).
+Data cleaning, analysis, and transformation.
+Reading and writing data from different file formats (CSV, Excel, JSON, SQL, etc.).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧩 Key Data Structures
+
+1️. Series (1-D data)
+
+A Series is like a column in a spreadsheet.
+
+import pandas as pd
+
+# Create a Series
+data = pd.Series([10, 20, 30, 40])
+print(data)
+
+✅ Access elements:
+
+print(data[2])   # Output: 30
+
+✅ With custom index:
+
+data = pd.Series([10, 20, 30], index=['a', 'b', 'c'])
+print(data['b'])  # Output: 20
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2️. DataFrame (2-D data)
+
+A DataFrame is like a full Excel sheet — rows and columns.
+
+import pandas as pd
+
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['Delhi', 'Mumbai', 'Bangalore']
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+✅ Access a column:
+
+print(df['Name'])
+
+✅ Access a row:
+
+print(df.loc[1])      # By label
+print(df.iloc[2])     # By index position
+
+🔹 Basic Operations
+
+✅ Add a new column:
+
+df['Salary'] = [50000, 60000, 70000]
+
+✅ Drop a column:
+
+df = df.drop('City', axis=1)
+
+✅ Filter rows:
+
+print(df[df['Age'] > 28])
+
+✅ Sort values:
+
+print(df.sort_values('Age'))
+
+✅ Get basic stats:
+
+print(df.describe())
+
+🔹 Reading & Writing Data
+
+✅ Read CSV:
+
+df = pd.read_csv('data.csv')
+
+✅ Write CSV:
+
+df.to_csv('output.csv', index=False)
+
+✅ Read Excel:
+
+df = pd.read_excel('data.xlsx')
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧠 Mini Practice Exercises
+
+Create a DataFrame with 4 students having Name, Marks, and City.
+Display only those students who scored more than 75
+Add a new column Result with values "Pass" or "Fail" based on marks ≥ 40.
+Sort students by marks descending.
+Save the DataFrame to a CSV file named students.csv.
+
+import pandas as pd
+
+# 1️. Create a DataFrame with 4 students
+data = {
+    'Name': ['Ravi', 'Sita', 'Amit', 'Neha'],
+    'Marks': [85, 72, 90, 38],
+    'City': ['Delhi', 'Mumbai', 'Pune', 'Bangalore']
+}
+
+df = pd.DataFrame(data)
+print("Original DataFrame:\n", df, "\n")
+
+# 2️. Display only students who scored more than 75
+high_scorers = df[df['Marks'] > 75]
+print("Students who scored more than 75:\n", high_scorers, "\n")
+
+# 3️. Add a new column 'Result' with 'Pass' or 'Fail'
+df['Result'] = df['Marks'].apply(lambda x: 'Pass' if x >= 40 else 'Fail')
+print("DataFrame with Result column:\n", df, "\n")
+
+# 4️. Sort students by marks in descending order
+sorted_df = df.sort_values(by='Marks', ascending=False)
+print("Sorted by Marks (Descending):\n", sorted_df, "\n")
+
+# 5️. Save the DataFrame to a CSV file
+sorted_df.to_csv('students.csv', index=False)
+print("✅ Data saved to 'students.csv'")
+
+🧾 Expected Output
+
+Original DataFrame:
+    Name  Marks       City
+0  Ravi     85      Delhi
+1  Sita     72     Mumbai
+2  Amit     90       Pune
+3  Neha     38  Bangalore
+
+Students who scored more than 75:
+    Name  Marks   City
+0  Ravi     85  Delhi
+2  Amit     90   Pune
+
+DataFrame with Result column:
+    Name  Marks       City Result
+0  Ravi     85      Delhi   Pass
+1  Sita     72     Mumbai   Pass
+2  Amit     90       Pune   Pass
+3  Neha     38  Bangalore   Fail
+
+Sorted by Marks (Descending):
+    Name  Marks       City Result
+2  Amit     90       Pune   Pass
+0  Ravi     85      Delhi   Pass
+1  Sita     72     Mumbai   Pass
+3  Neha     38  Bangalore   Fail
+
+✅ Data saved to 'students.csv'
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 30: Final Practice Project (e.g., student marks analysis or task tracker)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Awesome bro 🔥 — you’ve officially reached Day 30, the final day of your Python journey 🎯
+
+Let’s end strong with a mini real-world project using everything you learned:
+Classes, file handling, Pandas, NumPy, exception handling, etc.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧩 Final Project: Student Marks Analysis System
+
+🎯 Goal
+
+Build a small project that:
+Accepts student details (name, marks for 3 subjects)
+Calculates total, average, and grade
+Saves results to CSV
+Reads and analyzes top performers
+Uses OOP + Pandas
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧠 Code Implementation
+
+import pandas as pd
+
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks  # list of 3 marks
+
+    def total(self):
+        return sum(self.marks)
+
+    def average(self):
+        return self.total() / len(self.marks)
+
+    def grade(self):
+        avg = self.average()
+        if avg >= 85:
+            return 'A'
+        elif avg >= 70:
+            return 'B'
+        elif avg >= 50:
+            return 'C'
+        else:
+            return 'Fail'
+
+
+# ---------- Collect Student Data ----------
+students = []
+
+print("📘 Enter student data (type 'done' to finish):")
+while True:
+    name = input("Enter name: ")
+    if name.lower() == 'done':
+        break
+    try:
+        marks = [
+            int(input("Enter mark 1: ")),
+            int(input("Enter mark 2: ")),
+            int(input("Enter mark 3: "))
+        ]
+        students.append(Student(name, marks))
+    except ValueError:
+        print("❌ Invalid input! Please enter numeric marks.")
+
+# ---------- Save to CSV ----------
+data = []
+for s in students:
+    data.append({
+        'Name': s.name,
+        'Total': s.total(),
+        'Average': s.average(),
+        'Grade': s.grade()
+    })
+
+df = pd.DataFrame(data)
+df.to_csv("student_results.csv", index=False)
+print("\n✅ Results saved to student_results.csv!\n")
+
+# ---------- Analysis ----------
+print("📊 Top Performers:")
+print(df.sort_values(by='Average', ascending=False).head(3), "\n")
+
+print("🏆 Grade Count:")
+print(df['Grade'].value_counts())
+
+📋 Example Run
+
+📘 Enter student data (type 'done' to finish):
+Enter name: Ravi
+Enter mark 1: 85
+Enter mark 2: 78
+Enter mark 3: 92
+Enter name: Sita
+Enter mark 1: 45
+Enter mark 2: 50
+Enter mark 3: 48
+Enter name: Amit
+Enter mark 1: 90
+Enter mark 2: 88
+Enter mark 3: 95
+Enter name: done
+
+✅ Results saved to student_results.csv!
+
+📊 Top Performers:
+   Name  Total    Average Grade
+2  Amit    273  91.000000     A
+0  Ravi    255  85.000000     A
+1  Sita    143  47.666667  Fail
+
+🏆 Grade Count:
+A       2
+Fail    1
+Name: Grade, dtype: int64
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧠 Concepts Used
+
+✅ OOP (classes, methods, attributes)
+✅ Exception handling (try-except)
+✅ File handling (CSV using pandas)
+✅ Data analysis (sort_values, value_counts)
+✅ User input and looping
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                       End
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+## Git Commands
+
+git add . -> staged the changes
+
+git commit -m "commit message" -> commit the stages changes
+
+git push -u origin branchName -> push changes to branch
+
+git branch -M branchName -> Create a new branch
+
+git checkout -b branchName -> Create a new brannch based on destination branch
+
+git pull --rebase origin branchName -> Take a pull from destination branch
+
+git reset --soft HEAD~1 -> Undo the last commit but keep the changes
+
+git reset --mixed HEAD~1 -> Undo the last commit and unstage the files (keep changes)
+
+git reset --hard HEAD~1 -> Undo the last commit and delete the changes completely
+
+echo ".env" >> .gitignore -> Add .env path to gitignore file
